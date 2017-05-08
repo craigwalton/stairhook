@@ -12,7 +12,7 @@ var startScrollFrac = 0.5;
 var fps, fpsInterval, startTime, now, then, elapsed;
 
 function setup() {
-		
+
 	if (video != null)
 		return;
 	if(useScrollVideo()==false) {
@@ -27,6 +27,7 @@ function setup() {
 	videoHeight = parseInt(video.height || video.style.height);
 	// video duration in seconds
 	maxTime = 3;
+
 	
 	var scrollOffset = document.body.scrollTop || window.pageYOffset;
 	if (scrollOffset == 0) {
@@ -68,7 +69,6 @@ function animate() {
 
     }
 }
-
 
 function scrolled() { 
 
