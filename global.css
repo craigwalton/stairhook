@@ -145,7 +145,13 @@ a .bigText {
   color: rgba(0,0,0,1);
 }
 
+/*
 *::-webkit-media-controls-panel {
   display: none!important;
   -webkit-appearance: none;
+}
+*/
+
+video::-webkit-media-controls {
+    display:none !important;
 }
