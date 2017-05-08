@@ -144,3 +144,8 @@ a .bigText {
   border-radius: 50%;
   color: rgba(0,0,0,1);
 }
+
+*::-webkit-media-controls-panel {
+  display: none!important;
+  -webkit-appearance: none;
+}
