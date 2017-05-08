@@ -152,6 +152,10 @@ a .bigText {
 }
 */
 
+video::-webkit-media-controls-start-playback-button {
+  display: none;
+}
+
 video::-webkit-media-controls {
     display:none !important;
 }
