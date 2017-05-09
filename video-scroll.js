@@ -23,6 +23,7 @@ function setup() {
 		return;
 	}
 	video = document.getElementById('video');
+	video.pause();
 	videoTop = findPosY(video);
 	videoHeight = parseInt(video.height || video.style.height);
 	// video duration in seconds
@@ -72,8 +73,8 @@ function animate() {
 
 function scrolled() { 
 
-	if(video==null)	//if this is null, it means nothing has been setup yet - do it now
-		setup();
+	if(video==null)	
+		return;
 	
 	var scrollOffset = document.body.scrollTop || window.pageYOffset;
 	
@@ -88,6 +89,7 @@ function scrolled() {
 		var time = (1 - (representiveScrollFrac / (startScrollFrac - stopScrollFrac))) * maxTime;
 		
 		video.currentTime = time;
+		
 	} 
 }
 
