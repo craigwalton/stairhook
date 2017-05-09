@@ -42,7 +42,7 @@ function setup() {
 }
 
 function pauseVideo(vid) {
-	//vid.pause();
+	vid.pause();
 }
 
 // initialize the timer variables and start the animation
