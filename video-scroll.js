@@ -23,6 +23,8 @@ function setup() {
 		return;
 	}
 	video = document.getElementById('video');
+	
+	video.play();
 	video.pause();
 	videoTop = findPosY(video);
 	videoHeight = parseInt(video.height || video.style.height);
