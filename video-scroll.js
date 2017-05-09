@@ -11,6 +11,8 @@ var startScrollFrac = 0.5;
 
 var fps, fpsInterval, startTime, now, then, elapsed;
 
+document.getElementById('video').pause();
+
 function setup() {
 
 	if (video != null)
