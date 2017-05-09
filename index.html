@@ -18,7 +18,7 @@
 
 
 
-<body onload="" onresize="browserResized();" >
+<body onload="setup();" onresize="browserResized();" >
 
 	<div id="centered">
 		
@@ -42,7 +42,7 @@
 			
 			<div style="height: 400px; width: 100%; background: #f1f1f1; position: absolute; top: 400px; left: 0px;">
 				<div style="margin-left: auto; margin-right: auto; width: 930px; position: relative;">
-					<video id="video" tabindex="0" autobuffer muted preload="metadata" onloadstart="setup();" style="position: relative; left: 0px; top: 0px; height: 400px; width: 425px;">
+					<video id="video" tabindex="0" autobuffer muted preload autoplay oncanplay="pauseVideo(this);" style="position: relative; left: 0px; top: 0px; height: 400px; width: 425px;">
 						
 
 <!-- 					    <source type="video/webm; codecs=&quot;vp8, vorbis&quot;" src="graphics/explode.webm"></source> -->

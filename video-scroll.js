@@ -41,6 +41,10 @@ function setup() {
 	startAnimating(30);
 }
 
+function pauseVideo(vid) {
+	//vid.pause();
+}
+
 // initialize the timer variables and start the animation
 function startAnimating(fps) {
     fpsInterval = 1000 / fps;
