@@ -40,7 +40,7 @@ function setup() {
 		startScrollFrac = Math.min(startScrollFrac, getScrollFraction());
 	}
 	
-	startAnimating(30);
+	//startAnimating(30);
 }
 
 function pauseVideo(vid) {
