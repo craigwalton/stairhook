@@ -24,8 +24,10 @@ function setup() {
 	}
 	video = document.getElementById('video');
 	
+/*
 	video.play();
 	video.pause();
+*/
 	videoTop = findPosY(video);
 	videoHeight = parseInt(video.height || video.style.height);
 	// video duration in seconds
