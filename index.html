@@ -3,7 +3,8 @@
 <head>
 	<title>Stair Hook</title>
 	<link href="/global.css" rel="stylesheet" type="text/css"/>
-	<script src="video-scroll.js"></script>
+	<script src="/video-scroll.js"></script>
+	<script src="/add-email.js"></script>
 	
 	<script>
 		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -18,7 +19,7 @@
 
 
 
-<body onload="setup();" onresize="browserResized();" >
+<body onload="setup(); replaceWithEmail();" onresize="browserResized();" >
 
 	<div id="centered">
 		
@@ -92,7 +93,7 @@
 					
 					<img src="/graphics/2-pound-coin.png" width="100" style="position: absolute; top: 350px; left: 110px;"/>
 					<img src="/graphics/1-p-coin.png" width="67" style="position: absolute; top: 400px; left: 150px;"/>
-					<span style="width: 500px; position: absolute; left: 310px; top: 370px; color: gray; font-size: 1.2em; font-weight: 500; text-align: left; line-height: 1.3;">Stair Hook securely clamps onto any pole with a diameter between 20mm and 30mm. That's about anything from the size of a 1 pence coin to a 2 pound coin. </span>
+					<span style="width: 500px; position: absolute; left: 310px; top: 370px; color: gray; font-size: 1.2em; font-weight: 500; text-align: left; line-height: 1.3;">Stair Hook securely clamps onto any cylindrical pole with a diameter between 20mm and 30mm. That's about anything from the size of a 1 pence coin to a 2 pound coin. </span>
 					
 
 				</div>
@@ -115,8 +116,8 @@
 				<div>
 					
 					<div style="height: 300px; top: 0px; width: 930px; position: relative; margin-left: auto; margin-right: auto;">
-						<a href="/order/"><div class="bigText" style="position: absolute; top: 20px; left: 40px; font-size: 50px;">&pound;15 Order Yours Now</div></a>						
-						<div class="bigText" style="position: absolute; top: 200px; left: 40px; font-size: 25px;">Get in Touch&nbsp;&nbsp;-&nbsp;&nbsp;<span>craig.w</span> <img src="/graphics/at.png" style="width: 20px; height: 20px; position: relative; top : 2px;"/> <span>me.com</span></div>
+						<div class="bigText" style="position: absolute; top: 20px; left: 40px; font-size: 50px;"><a href="/order/">&pound;15 Order Yours Now</a>	</div>					
+						<div class="bigText" style="position: absolute; top: 200px; left: 40px; font-size: 25px;">Get in Touch&nbsp;&nbsp;-&nbsp;&nbsp;<a id="email-blank" href="">craig.w <span>_at_</span>me.com</a></div>
 						<div class="bigText" style="position: absolute; top: 250px; left: 40px; font-size: 25px;">Made in Edinburgh.</div>
 					</div>
 				</div>
