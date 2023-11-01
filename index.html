@@ -1,138 +1,129 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<title>Stair Hook</title>
-	<link href="/global.css" rel="stylesheet" type="text/css"/>
-	<script src="/video-scroll.js"></script>
-	<script src="/add-email.js"></script>
-	
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-98841697-1', 'auto');
-		ga('send', 'pageview');
-	</script>
+    <title>Stair Hook</title>
+    <link href="/global.css" rel="stylesheet" type="text/css" />
+    <script src="/video-scroll.js"></script>
+    <script src="/add-email.js"></script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        		ga('create', 'UA-98841697-1', 'auto');
+        		ga('send', 'pageview');
+    </script>
 
 </head>
 
+<body onload="setup(); replaceWithEmail();" onresize="browserResized();">
 
+    <div id="centered">
 
-<body onload="setup(); replaceWithEmail();" onresize="browserResized();" >
+        <div id="navBar">
+            <img src="/graphics/nav-bar-unselected-seg.png" style="position: absolute; height: 70px; width: 100%; left: 0px; " />
+            <div id="navBarContent">
+                <a href="/"><img id="logo" src="/graphics/logo.png" /></a>
+                <a href="/" class="navBarButton" style="right: 180px;">Home</a>
+                <a href="/order/" class="navBarButton" style="right: 90px;"><span style="text-decoration: line-through;">Order</span></a>
+                <div style="position: absolute; right: 20px; top: 28px; font-weight: 600;">Sold Out</div>
+            </div>
+        </div>
 
-	<div id="centered">
-		
-		<div id="navBar">
-			<img src="/graphics/nav-bar-unselected-seg.png" style="position: absolute; height: 70px; width: 100%; left: 0px; "/>
-			<div id="navBarContent">
-				<a href="/"><img id="logo" src="/graphics/logo.png"/></a>
-				<a href="/" class="navBarButton" style="right: 180px;">Home</a>
-				<a href="/order/" class="navBarButton" style="right: 90px;"><span style="text-decoration: line-through;">Order</span></a>
-				<div style="position: absolute; right: 20px; top: 28px; font-weight: 600;">Sold Out</div>
-			</div>
-		</div>
-		
-		<div id="mainContent">
-			
-			<div style="height: 30px; width: 100%; position: absolute; left: 0px; background-color: #fff952;">
-				<div style="margin-left: auto; margin-right: auto; width: 905px; position: relative; top: 7px; font-size: 0.8em;">
-					Sold Out. Unfortunately, I am no longer making new Stair Hooks due to insufficient demand.
-				</div>
+        <div id="mainContent">
 
-			</div>
-		
-			<div style="height: 330px; width: 100%; position: absolute; left: 0px; top: 100px; background-image: url('/graphics/stretched.jpg'); background-position: center top;">
-				<div style="margin-left: auto; margin-right: auto; width: 930px; position: relative; ">
-					<span style="position: absolute; left: 20px; top: 20px; font-size: 2em; font-weight: 900; width: 400px; text-align: left; color: white; text-shadow: 0px 1px 1px black;">Space-efficient storage<br/> for your bicycle.</span>
-				</div>
-			</div>
-			
-			<div style="height: 400px; width: 100%; background: #f1f1f1; position: absolute; top: 400px; left: 0px;">
-				<div style="margin-left: auto; margin-right: auto; width: 930px; position: relative;">
-					<video id="video" tabindex="0" autobuffer muted preload autoplay oncanplay="pauseVideo(this);" style="position: relative; left: 0px; top: 0px; height: 400px; width: 425px;">
+            <div style="height: 30px; width: 100%; position: absolute; left: 0px; background-color: #fff952;">
+                <div style="margin-left: auto; margin-right: auto; width: 905px; position: relative; top: 7px; font-size: 0.8em;">
+                    Sold Out. Unfortunately, I am no longer making new Stair Hooks due to insufficient demand.
+                </div>
+
+            </div>
+
+            <div style="height: 330px; width: 100%; position: absolute; left: 0px; top: 100px; background-image: url('/graphics/stretched.jpg'); background-position: center top;">
+                <div style="margin-left: auto; margin-right: auto; width: 930px; position: relative; ">
+                    <span style="position: absolute; left: 20px; top: 20px; font-size: 2em; font-weight: 900; width: 400px; text-align: left; color: white; text-shadow: 0px 1px 1px black;">Space-efficient storage<br/> for your bicycle.</span>
+                </div>
+            </div>
+
+            <div style="height: 400px; width: 100%; background: #f1f1f1; position: absolute; top: 400px; left: 0px;">
+                <div style="margin-left: auto; margin-right: auto; width: 930px; position: relative;">
+                    <video id="video" tabindex="0" autobuffer muted preload autoplay oncanplay="pauseVideo(this);" style="position: relative; left: 0px; top: 0px; height: 400px; width: 425px;">
 					    <source type="video/mp4" src="/graphics/explode.mp4"></source>
 					    <img src="/graphics/no-video.jpg" width="425"/>
-					</video>					
-					
+					</video>
 
-					<div style="position: absolute; left: 450px; width: 400px; top: 85px; font-size: 1.2em; font-weight: 500;">
-						Stair Hook addresses the problem of overcrowded bicycles in tenement stairwells.<br/><br/> The many bicycles stored in stairwells cause fire escape hazards and a build up of bicycles near the very few convenient lock-up points, meaning difficult to access and poorly secured bikes. <br/><br/> Stair Hook suspends your bike in otherwise unused space.
-					</div>
-				</div>
-				
-			</div>
-			
-			
-			<div style="height: 310px; width: 100%; position: absolute; top: 800px; left: 0px; background-image: url('/graphics/sun.jpg'); background-position: center top;">
-				
-				<div style="margin-left: auto; margin-right: auto; width: 930px; position: relative;">
-					<div style="position: absolute; left: 0px; top: 0px; width: 310px; height: 310px;">
-						<img src="/graphics/fire-exit.png" width="160" style="position: absolute; top: 100px; left: 75px;"/>
-						<span class="subtitle">Safe</span>
-						<span class="shadowText">Storing your bike Hi the walkway side of the stair is a fire escape hazard. Stair Hook suspends your bike in free space.</span>
-					</div>
-					
-					<div style="position: absolute; left: 310px; top: 0px; width: 310px; height: 310px;">
-						<img src="/graphics/d-lock.png" width="70" style="position: absolute; top: 70px; left: 120px;"/>
-						<span class="subtitle">Secure</span>
-						<span class="shadowText">By suspending your bike right next to the banister poles, you can easily use a U-lock to secure the frame or wheels.</span>
-					</div>
-					
-					<div style="position: absolute; left: 620px; top: 0px; width: 310px; height: 310px;">
-						<img src="/graphics/anvil.png" width="70" style="position: absolute; top: 80px; left: 120px;"/>
-						<span class="subtitle">Strong</span>
-						<span class="shadowText">A typical road bike weighs 7kg.<br/> A typical mountain bike weighs 16kg. Stair Hook supports 20kg.</span>
-					</div>
-				</div>
-			</div>
-			
-			<div style="height: 500px; width: 100%; position: absolute; top: 1110px; left: 0px;  background: #f1f1f1; ">
-				<div style="margin-left: auto; margin-right: auto; width: 930px; position: relative;">					
-					
-					
-					<video id="fea-video" loop muted autoplay playsinline oncanplay="this.play();" style="position: absolute; top: 40px; left: 40px; width: 250px; background: transparent;">
+                    <div style="position: absolute; left: 450px; width: 400px; top: 85px; font-size: 1.2em; font-weight: 500;">
+                        Stair Hook addresses the problem of overcrowded bicycles in tenement stairwells.<br/><br/> The many bicycles stored in stairwells cause fire escape hazards and a build up of bicycles near the very few convenient lock-up points, meaning difficult to access and poorly secured bikes. <br/><br/> Stair Hook suspends your bike in otherwise unused space.
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="height: 310px; width: 100%; position: absolute; top: 800px; left: 0px; background-image: url('/graphics/sun.jpg'); background-position: center top;">
+
+                <div style="margin-left: auto; margin-right: auto; width: 930px; position: relative;">
+                    <div style="position: absolute; left: 0px; top: 0px; width: 310px; height: 310px;">
+                        <img src="/graphics/fire-exit.png" width="160" style="position: absolute; top: 100px; left: 75px;" />
+                        <span class="subtitle">Safe</span>
+                        <span class="shadowText">Storing your bike Hi the walkway side of the stair is a fire escape hazard. Stair Hook suspends your bike in free space.</span>
+                    </div>
+
+                    <div style="position: absolute; left: 310px; top: 0px; width: 310px; height: 310px;">
+                        <img src="/graphics/d-lock.png" width="70" style="position: absolute; top: 70px; left: 120px;" />
+                        <span class="subtitle">Secure</span>
+                        <span class="shadowText">By suspending your bike right next to the banister poles, you can easily use a U-lock to secure the frame or wheels.</span>
+                    </div>
+
+                    <div style="position: absolute; left: 620px; top: 0px; width: 310px; height: 310px;">
+                        <img src="/graphics/anvil.png" width="70" style="position: absolute; top: 80px; left: 120px;" />
+                        <span class="subtitle">Strong</span>
+                        <span class="shadowText">A typical road bike weighs 7kg.<br/> A typical mountain bike weighs 16kg. Stair Hook supports 20kg.</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="height: 500px; width: 100%; position: absolute; top: 1110px; left: 0px;  background: #f1f1f1; ">
+                <div style="margin-left: auto; margin-right: auto; width: 930px; position: relative;">
+
+                    <video id="fea-video" loop muted autoplay playsinline oncanplay="this.play();" style="position: absolute; top: 40px; left: 40px; width: 250px; background: transparent;">
 					    <source type="video/mp4" src="/graphics/fea.mp4"></source>
-					</video>	
-					<span style="width: 500px; position: absolute; left: 310px; top: 100px; color: gray; font-size: 1.2em; font-weight: 500; text-align: left; line-height: 1.3;">Stair Hook is 3D printed in ABS (a tough plastic) then submerged in an acetone vapour bath to add gloss and increase the part's strength and durability.</span>
-					
-					
-					<img src="/graphics/2-pound-coin.png" width="100" style="position: absolute; top: 350px; left: 110px;"/>
-					<img src="/graphics/1-p-coin.png" width="67" style="position: absolute; top: 400px; left: 150px;"/>
-					<span style="width: 500px; position: absolute; left: 310px; top: 370px; color: gray; font-size: 1.2em; font-weight: 500; text-align: left; line-height: 1.3;">Stair Hook securely clamps onto any cylindrical pole with a diameter between 20mm and 30mm. That's about anything from the size of a 1 pence coin to a 2 pound coin. </span>
-					
+					</video>
+                    <span style="width: 500px; position: absolute; left: 310px; top: 100px; color: gray; font-size: 1.2em; font-weight: 500; text-align: left; line-height: 1.3;">Stair Hook is 3D printed in ABS (a tough plastic) then submerged in an acetone vapour bath to add gloss and increase the part's strength and durability.</span>
 
-				</div>
-			</div>
-			
-			
-			<div style="height: 620px; width: 100%; position: absolute; top: 1610px; left: 0px; background: url('/graphics/grid-background.jpg'); background-position: center top;">
-				<div style="margin-left: auto; margin-right: auto; width: 930px; position: relative;">	
-					<img src="/graphics/square-2.jpg" width="310" style="position: absolute; top: 0px; left: 0px;"/>
-					<img src="/graphics/square-1.jpg" width="310" style="position: absolute; top: 0px; left: 310px;"/>
-					<img src="/graphics/square-3.jpg" width="310" style="position: absolute; top: 0px; left: 620px;"/>
-					<img src="/graphics/square-4.jpg" width="310" style="position: absolute; top: 310px; left: 0px;"/>
-					<img src="/graphics/square-5.jpg" width="310" style="position: absolute; top: 310px; left: 310px;"/>
-					<img src="/graphics/square-6.jpg" width="310" style="position: absolute; top: 310px; left: 620px;"/>
-				</div>
-			</div>
-			
+                    <img src="/graphics/2-pound-coin.png" width="100" style="position: absolute; top: 350px; left: 110px;" />
+                    <img src="/graphics/1-p-coin.png" width="67" style="position: absolute; top: 400px; left: 150px;" />
+                    <span style="width: 500px; position: absolute; left: 310px; top: 370px; color: gray; font-size: 1.2em; font-weight: 500; text-align: left; line-height: 1.3;">Stair Hook securely clamps onto any cylindrical pole with a diameter between 20mm and 30mm. That's about anything from the size of a 1 pence coin to a 2 pound coin. </span>
 
-			<div style="height: 300px; width: 100%; position: absolute; top: 2230px; left: 0px; background-image: url('/graphics/sand.jpg'); background-position: center top;">
-				<div>
-					
-					<div style="height: 300px; top: 0px; width: 930px; position: relative; margin-left: auto; margin-right: auto;">
-						<div class="bigText" style="position: absolute; top: 20px; left: 40px; font-size: 50px;"><a href="/order/">&pound;15 Order Yours Now</a>	</div>					
-						<div class="bigText" style="position: absolute; top: 200px; left: 40px; font-size: 25px;">Get in Touch&nbsp;&nbsp;-&nbsp;&nbsp;<a id="email-blank" href="">craig.w <span>_at_</span>me.com</a></div>
-						<div class="bigText" style="position: absolute; top: 250px; left: 40px; font-size: 25px;">Made in Edinburgh.</div>
-					</div>
-				</div>
-				
-			</div>
-			
-			
-		</div>
-	</div>
+                </div>
+            </div>
+
+            <div style="height: 620px; width: 100%; position: absolute; top: 1610px; left: 0px; background: url('/graphics/grid-background.jpg'); background-position: center top;">
+                <div style="margin-left: auto; margin-right: auto; width: 930px; position: relative;">
+                    <img src="/graphics/square-2.jpg" width="310" style="position: absolute; top: 0px; left: 0px;" />
+                    <img src="/graphics/square-1.jpg" width="310" style="position: absolute; top: 0px; left: 310px;" />
+                    <img src="/graphics/square-3.jpg" width="310" style="position: absolute; top: 0px; left: 620px;" />
+                    <img src="/graphics/square-4.jpg" width="310" style="position: absolute; top: 310px; left: 0px;" />
+                    <img src="/graphics/square-5.jpg" width="310" style="position: absolute; top: 310px; left: 310px;" />
+                    <img src="/graphics/square-6.jpg" width="310" style="position: absolute; top: 310px; left: 620px;" />
+                </div>
+            </div>
+
+            <div style="height: 300px; width: 100%; position: absolute; top: 2230px; left: 0px; background-image: url('/graphics/sand.jpg'); background-position: center top;">
+                <div>
+
+                    <div style="height: 300px; top: 0px; width: 930px; position: relative; margin-left: auto; margin-right: auto;">
+                        <div class="bigText" style="position: absolute; top: 20px; left: 40px; font-size: 50px;"><a href="/order/">&pound;15 Order Yours Now</a> </div>
+                        <div class="bigText" style="position: absolute; top: 200px; left: 40px; font-size: 25px;">Get in Touch&nbsp;&nbsp;-&nbsp;&nbsp;<a id="email-blank" href="">craig.w <span>_at_</span>me.com</a></div>
+                        <div class="bigText" style="position: absolute; top: 250px; left: 40px; font-size: 25px;">Made in Edinburgh.</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
 </body>
 
 </html>
